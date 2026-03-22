@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive — Your Name</title>
+  <meta name="description" content="All drawings and paintings by [Your Name]." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <h1 class="section-title">Archive</h1>
+    <p class="section-subtitle">All works — click any piece for details</p>
+    <div class="divider"></div>
+
+    <!-- Category filters -->
+    <div class="archive-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="painting">Paintings</button>
+      <button class="filter-btn" data-filter="drawing">Drawings</button>
+    </div>
+
+    <!--
+      HOW TO ADD WORKS TO THE ARCHIVE:
+      ─────────────────────────────────────────────────────────────
+      Copy one <article class="card"> block below and fill in:
+
+        data-category     → "painting" OR "drawing"
+        onclick values    → image path, title, meta, description, category
+        img src + alt     → path to your image file
+        card-title text   → title of the work
+        card-meta text    → medium · year
+
+      Image tips:
+        • Put all images in the "images/" folder.
+        • Thumbnails look fine at 600–800 px wide.
+          The browser displays them small; no need for separate thumb files.
+        • Keep originals for the lightbox zoom.
+
+      The filter buttons above use data-category to show/hide cards.
+      ─────────────────────────────────────────────────────────────
+    -->
+    <div class="grid">
+
+      <article class="card" data-category="painting"
+        onclick="openLightbox(
+          'images/work-1.jpg',
+          'Work Title One',
+          'Oil on canvas · 2025 · 40×50 cm',
+          'A short description of this piece and what it means to you.',
+          'Painting'
+        )">
+        <div class="card-thumb">
+          <img src="images/work-1.jpg" alt="Work Title One"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="card-body">
+          <p class="card-title">Work Title One</p>
+          <p class="card-meta">Oil on canvas · 2025</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="drawing"
+        onclick="openLightbox(
+          'images/work-2.jpg',
+          'Work Title Two',
+          'Pencil on paper · 2025 · 30×40 cm',
+          'A short description of this piece.',
+          'Drawing'
+        )">
+        <div class="card-thumb">
+          <img src="images/work-2.jpg" alt="Work Title Two"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="card-body">
+          <p class="card-title">Work Title Two</p>
+          <p class="card-meta">Pencil on paper · 2025</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="painting"
+        onclick="openLightbox(
+          'images/work-3.jpg',
+          'Work Title Three',
+          'Watercolour · 2024 · 25×35 cm',
+          'A short description of this piece.',
+          'Painting'
+        )">
+        <div class="card-thumb">
+          <img src="images/work-3.jpg" alt="Work Title Three"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="card-body">
+          <p class="card-title">Work Title Three</p>
+          <p class="card-meta">Watercolour · 2024</p>
+        </div>
+      </article>
+
+      <article class="card" data-category="drawing"
+        onclick="openLightbox(
+          'images/work-4.jpg',
+          'Work Title Four',
+          'Ink on paper · 2024 · 21×29 cm',
+          'A short description of this piece.',
+          'Drawing'
+        )">
+        <div class="card-thumb">
+          <img src="images/work-4.jpg" alt="Work Title Four"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="card-body">
+          <p class="card-title">Work Title Four</p>
+          <p class="card-meta">Ink on paper · 2024</p>
+        </div>
+      </article>
+
+      <!-- Add more works by copying a card block above -->
+
+    </div><!-- /grid -->
+
+  </main>
+
+  <!-- ── Lightbox ───────────────────────────────────────────── -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#x2715;</button>
+
+      <div class="lightbox-img-wrap">
+        <img id="lb-img" src="" alt="" />
+      </div>
+
+      <div class="lightbox-info">
+        <p  id="lb-tag"   class="tag"></p>
+        <h2 id="lb-title"></h2>
+        <p  id="lb-meta"  class="lb-meta"></p>
+        <p  id="lb-desc"  class="lb-desc"></p>
+        <p  id="lb-price" class="lb-price" style="display:none;"></p>
+        <a  id="lb-email" class="btn btn-accent" style="display:none;">Enquire by email</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2025 Your Name &nbsp;·&nbsp; <a href="mailto:you@example.com">you@example.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

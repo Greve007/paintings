@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop — Your Name</title>
+  <meta name="description" content="Original artworks available for purchase by [Your Name]." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Your Name</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── Main ───────────────────────────────────────────────── -->
+  <main class="page">
+
+    <h1 class="section-title">Shop</h1>
+    <div class="divider"></div>
+
+    <div class="shop-intro">
+      <p>
+        All works are original, one-of-a-kind pieces. To purchase or place a
+        bid, send me an email — I'll get back to you within a few days.
+      </p>
+    </div>
+
+    <!--
+      HOW TO ADD A WORK FOR SALE:
+      ─────────────────────────────────────────────────────────────
+      Copy one <article class="shop-card"> block and fill in:
+
+        shop-card-thumb img   → path to your image
+        shop-card-title       → title of the work
+        shop-card-meta        → medium · year · dimensions
+        shop-price            → price in your currency, e.g. "€ 350"
+        shop-badge class      → badge-sale  (fixed price)
+                                badge-bidding (open to bids)
+                                badge-sold (already sold)
+        shop-badge text       → "For sale" / "Open to bids" / "Sold"
+        href on the email btn → mailto link with the correct subject
+
+      Click on the image opens the lightbox (same as archive).
+      ─────────────────────────────────────────────────────────────
+    -->
+    <div class="shop-grid">
+
+      <!-- Work for sale at fixed price -->
+      <article class="shop-card">
+        <div class="shop-card-thumb"
+          onclick="openLightbox(
+            'images/shop-1.jpg',
+            'For Sale Title One',
+            'Oil on canvas · 2025 · 40×50 cm',
+            'A short description of this piece.',
+            'Painting',
+            '€ 450',
+            'you@example.com'
+          )">
+          <img src="images/shop-1.jpg" alt="For Sale Title One"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="shop-card-body">
+          <p class="shop-card-title">For Sale Title One</p>
+          <p class="shop-card-meta">Oil on canvas · 2025 · 40×50 cm</p>
+          <div class="shop-price-row">
+            <!-- REPLACE: price -->
+            <span class="shop-price">€ 450</span>
+            <span class="shop-badge badge-sale">For sale</span>
+          </div>
+          <!-- REPLACE: subject line and email address -->
+          <a class="btn btn-accent"
+             href="mailto:you@example.com?subject=Enquiry: For Sale Title One">
+            Contact to buy
+          </a>
+        </div>
+      </article>
+
+      <!-- Work open to bids -->
+      <article class="shop-card">
+        <div class="shop-card-thumb"
+          onclick="openLightbox(
+            'images/shop-2.jpg',
+            'Bidding Title Two',
+            'Pencil on paper · 2025 · 30×40 cm',
+            'A short description of this piece.',
+            'Drawing',
+            'Open to bids — starting € 200',
+            'you@example.com'
+          )">
+          <img src="images/shop-2.jpg" alt="Bidding Title Two"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="shop-card-body">
+          <p class="shop-card-title">Bidding Title Two</p>
+          <p class="shop-card-meta">Pencil on paper · 2025 · 30×40 cm</p>
+          <div class="shop-price-row">
+            <span class="shop-price">from € 200</span>
+            <span class="shop-badge badge-bidding">Open to bids</span>
+          </div>
+          <a class="btn btn-accent"
+             href="mailto:you@example.com?subject=Bid: Bidding Title Two">
+            Place a bid
+          </a>
+        </div>
+      </article>
+
+      <!-- Already sold (shown as reference) -->
+      <article class="shop-card">
+        <div class="shop-card-thumb"
+          onclick="openLightbox(
+            'images/shop-3.jpg',
+            'Sold Title Three',
+            'Watercolour · 2024 · 25×35 cm',
+            'A short description of this piece.',
+            'Painting'
+          )">
+          <img src="images/shop-3.jpg" alt="Sold Title Three"
+               onerror="this.parentElement.style.background='#e0dbd3'" />
+        </div>
+        <div class="shop-card-body">
+          <p class="shop-card-title">Sold Title Three</p>
+          <p class="shop-card-meta">Watercolour · 2024 · 25×35 cm</p>
+          <div class="shop-price-row">
+            <span class="shop-price" style="color: var(--ink-muted);">€ 300</span>
+            <span class="shop-badge badge-sold">Sold</span>
+          </div>
+          <!-- No button for sold works -->
+        </div>
+      </article>
+
+      <!-- Add more works by copying a card block above -->
+
+    </div><!-- /shop-grid -->
+
+    <!-- How to buy note -->
+    <div class="shop-note">
+      <h3>How it works</h3>
+      <p>
+        Send me an email with the name of the work you're interested in. I'll
+        reply with payment details and arrange shipping or local pickup.
+        All paintings are shipped carefully, unframed, with a certificate of
+        authenticity.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- ── Lightbox ───────────────────────────────────────────── -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#x2715;</button>
+
+      <div class="lightbox-img-wrap">
+        <img id="lb-img" src="" alt="" />
+      </div>
+
+      <div class="lightbox-info">
+        <p  id="lb-tag"   class="tag"></p>
+        <h2 id="lb-title"></h2>
+        <p  id="lb-meta"  class="lb-meta"></p>
+        <p  id="lb-desc"  class="lb-desc"></p>
+        <p  id="lb-price" class="lb-price" style="display:none;"></p>
+        <a  id="lb-email" class="btn btn-accent" style="display:none;">Enquire by email</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <p>&copy; 2025 Your Name &nbsp;·&nbsp; <a href="mailto:you@example.com">you@example.com</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
