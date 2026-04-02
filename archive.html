@@ -17,7 +17,7 @@
   <!-- ── Navigation ─────────────────────────────────────────── -->
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Johan paintings</a>
+      <a href="index.html" class="nav-logo">Your Name</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="archive.html">Archive</a></li>
@@ -34,108 +34,63 @@
     <p class="section-subtitle">All works — click any piece for details</p>
     <div class="divider"></div>
 
-    <!-- Category filters -->
-    <div class="archive-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="painting">Paintings</button>
-      <button class="filter-btn" data-filter="drawing">Drawings</button>
-    </div>
-
-    <!--
-      HOW TO ADD WORKS TO THE ARCHIVE:
-      ─────────────────────────────────────────────────────────────
-      Copy one <article class="card"> block below and fill in:
-
-        data-category     → "painting" OR "drawing"
-        onclick values    → image path, title, meta, description, category
-        img src + alt     → path to your image file
-        card-title text   → title of the work
-        card-meta text    → medium · year
-
-      Image tips:
-        • Put all images in the "images/" folder.
-        • Thumbnails look fine at 600–800 px wide.
-          The browser displays them small; no need for separate thumb files.
-        • Keep originals for the lightbox zoom.
-
-      The filter buttons above use data-category to show/hide cards.
-      ─────────────────────────────────────────────────────────────
-    -->
+    <!-- Year section: 2026 -->
+    <h2 class="recent-heading" style="margin-bottom: 1.5rem;">2026</h2>
     <div class="grid">
 
-      <article class="card" data-category="painting"
+      <article class="card" data-category="drawing"
         onclick="openLightbox(
-          'images/work-1.jpg',
-          'Work Title One',
-          'Oil on canvas · 2025 · 40×50 cm',
-          'A short description of this piece and what it means to you.',
-          'Painting'
+          'images/3.jpg',
+          'Charcoal drawing',
+          'Charcoal · 2025 · A4',
+          'This drawing was made as a surprise for a friend\'s birthday.',
+          'Drawing'
         )">
         <div class="card-thumb">
-          <img src="images/work-1.jpg" alt="Work Title One"
+          <img src="images/3.jpg" alt="Charcoal drawing"
                onerror="this.parentElement.style.background='#e0dbd3'" />
         </div>
         <div class="card-body">
-          <p class="card-title">Work Title One</p>
-          <p class="card-meta">Oil on canvas · 2025</p>
+          <p class="card-title">Charcoal drawing</p>
+          <p class="card-meta">Charcoal · 2025</p>
         </div>
       </article>
 
       <article class="card" data-category="drawing"
         onclick="openLightbox(
-          'images/work-2.jpg',
-          'Work Title Two',
-          'Pencil on paper · 2025 · 30×40 cm',
-          'A short description of this piece.',
+          'images/2.jpg',
+          'Farmer from Walcheren',
+          'Charcoal · 2026 · A4',
+          '',
           'Drawing'
         )">
         <div class="card-thumb">
-          <img src="images/work-2.jpg" alt="Work Title Two"
+          <img src="images/2.jpg" alt="Farmer from Walcheren"
                onerror="this.parentElement.style.background='#e0dbd3'" />
         </div>
         <div class="card-body">
-          <p class="card-title">Work Title Two</p>
-          <p class="card-meta">Pencil on paper · 2025</p>
-        </div>
-      </article>
-
-      <article class="card" data-category="painting"
-        onclick="openLightbox(
-          'images/work-3.jpg',
-          'Work Title Three',
-          'Watercolour · 2024 · 25×35 cm',
-          'A short description of this piece.',
-          'Painting'
-        )">
-        <div class="card-thumb">
-          <img src="images/work-3.jpg" alt="Work Title Three"
-               onerror="this.parentElement.style.background='#e0dbd3'" />
-        </div>
-        <div class="card-body">
-          <p class="card-title">Work Title Three</p>
-          <p class="card-meta">Watercolour · 2024</p>
+          <p class="card-title">Farmer from Walcheren</p>
+          <p class="card-meta">Charcoal · 2026</p>
         </div>
       </article>
 
       <article class="card" data-category="drawing"
         onclick="openLightbox(
-          'images/work-4.jpg',
-          'Work Title Four',
-          'Ink on paper · 2024 · 21×29 cm',
-          'A short description of this piece.',
+          'images/1.jpg',
+          'Asian boy in traditional festive clothing',
+          'Charcoal · 2024 · A4 horizontal',
+          '',
           'Drawing'
         )">
         <div class="card-thumb">
-          <img src="images/work-4.jpg" alt="Work Title Four"
+          <img src="images/1.jpg" alt="Asian boy in traditional festive clothing"
                onerror="this.parentElement.style.background='#e0dbd3'" />
         </div>
         <div class="card-body">
-          <p class="card-title">Work Title Four</p>
-          <p class="card-meta">Ink on paper · 2024</p>
+          <p class="card-title">Asian boy in traditional festive clothing</p>
+          <p class="card-meta">Charcoal · 2024</p>
         </div>
       </article>
-
-      <!-- Add more works by copying a card block above -->
 
     </div><!-- /grid -->
 
