@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Artist</title>
-  <meta name="description" content="Original drawings and paintings by [Your Name]." />
+  <title>Johan's paintings — Artist</title>
+  <meta name="description" content="Original drawings and paintings by Johan van Gravenbroek." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@
   <!-- ── Navigation ─────────────────────────────────────────── -->
   <nav>
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Your Name</a>
+      <a href="index.html" class="nav-logo">Johan's paintings</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="archive.html">Archive</a></li>
@@ -35,14 +35,9 @@
     <section class="hero">
 
       <div class="hero-image-wrap">
-        <!--
-          REPLACE: Change src to your newest painting/drawing.
-          Recommended size: at least 800 × 1050 px.
-          Example: src="images/newest-work.jpg"
-        -->
         <img
-          src="images/3.jpg"
-          alt="Constans"
+          src="images/Amy_Winehouse__Mixed_technique__ink_pen_and_aquarel.jpg"
+          alt="Amy Winehouse"
           onerror="this.style.display='none'"
         />
       </div>
@@ -50,12 +45,12 @@
       <div class="hero-text">
         <p class="hero-tag">Latest work</p>
 
-        <h1 class="hero-title">Charcoal drawing</h1>
+        <h1 class="hero-title">Amy Winehouse</h1>
 
-        <p class="hero-meta">Charcoal &nbsp;·&nbsp; 2025 &nbsp;·&nbsp; A4</p>
+        <p class="hero-meta">Ink pen &amp; watercolour &nbsp;·&nbsp; 2026 &nbsp;·&nbsp; Mixed technique</p>
 
         <p class="hero-description">
-          This drawing was made as a surprise for a friend's birthday.
+          A portrait of Amy Winehouse, combining ink pen hatching with watercolour washes.
         </p>
 
         <a href="archive.html" class="btn">View all works</a>
@@ -69,17 +64,6 @@
         <a href="archive.html">See full archive →</a>
       </h2>
 
-      <!--
-        HOW TO ADD WORKS:
-        Copy one <article class="card"> block and fill in:
-          • data-category  → "painting" or "drawing"
-          • The onclick values (image path, title, meta, description, category)
-          • card-thumb img src + alt
-          • card-title and card-meta text
-
-        Image tip: use the same image for thumb and lightbox.
-        Thumbnails load fast because they are displayed small (CSS does the work).
-      -->
       <div class="grid">
 
         <article class="card" data-category="drawing"
@@ -102,19 +86,19 @@
 
         <article class="card" data-category="drawing"
           onclick="openLightbox(
-            'images/1.jpg',
-            'Asian boy in traditional festive clothing',
-            'Charcoal · 2024 · A4 horizontal',
-            '',
+            'images/3.jpg',
+            'Charcoal drawing',
+            'Charcoal · 2025 · A4',
+            'This drawing was made as a surprise for a friend\'s birthday.',
             'Drawing'
           )">
           <div class="card-thumb">
-            <img src="images/1.jpg" alt="Asian boy in traditional festive clothing"
+            <img src="images/3.jpg" alt="Charcoal drawing"
                  onerror="this.parentElement.style.background='#e0dbd3'" />
           </div>
           <div class="card-body">
-            <p class="card-title">Asian boy in traditional festive clothing</p>
-            <p class="card-meta">Charcoal · 2024</p>
+            <p class="card-title">Charcoal drawing</p>
+            <p class="card-meta">Charcoal · 2025</p>
           </div>
         </article>
 
@@ -145,8 +129,7 @@
 
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
-    <!-- REPLACE: your name and email -->
-    <p>&copy; 2025 Your Name &nbsp;·&nbsp; <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>&copy; 2026 Johan van Gravenbroek &nbsp;·&nbsp; <a href="mailto:you@example.com">you@example.com</a></p>
   </footer>
 
   <script src="script.js"></script>
