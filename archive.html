@@ -11,10 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .year-section { margin-bottom: 5rem; }
+    .year-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 0.4rem;
+    }
+    .year-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <!-- Navigation -->
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Johan's paintings</a>
@@ -27,114 +44,92 @@
     </div>
   </nav>
 
-  <!-- ── Main ───────────────────────────────────────────────── -->
   <main class="page">
 
     <h1 class="section-title">Archive</h1>
     <p class="section-subtitle">All works — click any piece for details</p>
     <div class="divider"></div>
 
-    <!-- ── 2026 ──────────────────────────────────────────────── -->
-    <h2 class="recent-heading" style="margin-bottom: 1.5rem;">2026</h2>
-    <div class="grid" style="margin-bottom: 4rem;">
+    <!-- 2026 -->
+    <section class="year-section">
+      <h2 class="year-heading">2026</h2>
+      <div class="year-divider"></div>
+      <div class="grid">
 
-      <article class="card" data-category="drawing"
-        onclick="openLightbox(
-          'images/Amy_Winehouse__Mixed_technique__ink_pen_and_aquarel.jpg',
-          'Amy Winehouse',
-          'Ink pen &amp; watercolour · 2026 · Mixed technique',
-          'A portrait of Amy Winehouse, combining ink pen hatching with watercolour washes.',
-          'Drawing'
-        )">
-        <div class="card-thumb">
-          <img src="images/Amy_Winehouse__Mixed_technique__ink_pen_and_aquarel.jpg" alt="Amy Winehouse"
-               onerror="this.parentElement.style.background='#e0dbd3'" />
-        </div>
-        <div class="card-body">
-          <p class="card-title">Amy Winehouse</p>
-          <p class="card-meta">Ink pen &amp; watercolour · 2026</p>
-        </div>
-      </article>
+        <article class="card" data-category="drawing"
+          onclick="openLightbox('images/4.jpg','Amy Winehouse','Ink pen &amp; watercolour · 2026 · Mixed technique','A portrait of Amy Winehouse, combining ink pen hatching with watercolour washes.','Drawing')">
+          <div class="card-thumb">
+            <img src="images/4.jpg" alt="Amy Winehouse" onerror="this.parentElement.style.background='#e0dbd3'" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">Amy Winehouse</p>
+            <p class="card-meta">Ink pen &amp; watercolour · 2026</p>
+          </div>
+        </article>
 
-      <article class="card" data-category="drawing"
-        onclick="openLightbox(
-          'images/2.jpg',
-          'Farmer from Walcheren',
-          'Charcoal · 2026 · A4',
-          '',
-          'Drawing'
-        )">
-        <div class="card-thumb">
-          <img src="images/2.jpg" alt="Farmer from Walcheren"
-               onerror="this.parentElement.style.background='#e0dbd3'" />
-        </div>
-        <div class="card-body">
-          <p class="card-title">Farmer from Walcheren</p>
-          <p class="card-meta">Charcoal · 2026</p>
-        </div>
-      </article>
+        <article class="card" data-category="drawing"
+          onclick="openLightbox('images/2.jpg','Farmer from Walcheren','Charcoal · 2026 · A4','','Drawing')">
+          <div class="card-thumb">
+            <img src="images/2.jpg" alt="Farmer from Walcheren" onerror="this.parentElement.style.background='#e0dbd3'" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">Farmer from Walcheren</p>
+            <p class="card-meta">Charcoal · 2026</p>
+          </div>
+        </article>
 
-    </div><!-- /grid 2026 -->
+      </div>
+    </section>
 
-    <!-- ── 2025 ──────────────────────────────────────────────── -->
-    <h2 class="recent-heading" style="margin-bottom: 1.5rem;">2025</h2>
-    <div class="grid" style="margin-bottom: 4rem;">
+    <!-- 2025 -->
+    <section class="year-section">
+      <h2 class="year-heading">2025</h2>
+      <div class="year-divider"></div>
+      <div class="grid">
 
-      <article class="card" data-category="drawing"
-        onclick="openLightbox(
-          'images/3.jpg',
-          'Charcoal drawing',
-          'Charcoal · 2025 · A4',
-          'This drawing was made as a surprise for a friend\'s birthday.',
-          'Drawing'
-        )">
-        <div class="card-thumb">
-          <img src="images/3.jpg" alt="Charcoal drawing"
-               onerror="this.parentElement.style.background='#e0dbd3'" />
-        </div>
-        <div class="card-body">
-          <p class="card-title">Charcoal drawing</p>
-          <p class="card-meta">Charcoal · 2025</p>
-        </div>
-      </article>
+        <article class="card" data-category="drawing"
+          onclick="openLightbox('images/3.jpg','Charcoal drawing','Charcoal · 2025 · A4','This drawing was made as a surprise for a friend\'s birthday.','Drawing')">
+          <div class="card-thumb">
+            <img src="images/3.jpg" alt="Charcoal drawing" onerror="this.parentElement.style.background='#e0dbd3'" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">Charcoal drawing</p>
+            <p class="card-meta">Charcoal · 2025</p>
+          </div>
+        </article>
 
-    </div><!-- /grid 2025 -->
+      </div>
+    </section>
 
-    <!-- ── 2024 ──────────────────────────────────────────────── -->
-    <h2 class="recent-heading" style="margin-bottom: 1.5rem;">2024</h2>
-    <div class="grid" style="margin-bottom: 4rem;">
+    <!-- 2024 -->
+    <section class="year-section">
+      <h2 class="year-heading">2024</h2>
+      <div class="year-divider"></div>
+      <div class="grid">
 
-      <article class="card" data-category="drawing"
-        onclick="openLightbox(
-          'images/1.jpg',
-          'Asian boy in traditional festive clothing',
-          'Charcoal · 2024 · A4 horizontal',
-          '',
-          'Drawing'
-        )">
-        <div class="card-thumb">
-          <img src="images/1.jpg" alt="Asian boy in traditional festive clothing"
-               onerror="this.parentElement.style.background='#e0dbd3'" />
-        </div>
-        <div class="card-body">
-          <p class="card-title">Asian boy in traditional festive clothing</p>
-          <p class="card-meta">Charcoal · 2024</p>
-        </div>
-      </article>
+        <article class="card" data-category="drawing"
+          onclick="openLightbox('images/1.jpg','Asian boy in traditional festive clothing','Charcoal · 2024 · A4 horizontal','','Drawing')">
+          <div class="card-thumb">
+            <img src="images/1.jpg" alt="Asian boy in traditional festive clothing" onerror="this.parentElement.style.background='#e0dbd3'" />
+          </div>
+          <div class="card-body">
+            <p class="card-title">Asian boy in traditional festive clothing</p>
+            <p class="card-meta">Charcoal · 2024</p>
+          </div>
+        </article>
 
-    </div><!-- /grid 2024 -->
+      </div>
+    </section>
 
   </main>
 
-  <!-- ── Lightbox ───────────────────────────────────────────── -->
+  <!-- Lightbox -->
   <div class="lightbox-overlay" id="lightbox">
     <div class="lightbox-inner">
       <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">&#x2715;</button>
-
       <div class="lightbox-img-wrap">
         <img id="lb-img" src="" alt="" />
       </div>
-
       <div class="lightbox-info">
         <p  id="lb-tag"   class="tag"></p>
         <h2 id="lb-title"></h2>
@@ -146,7 +141,6 @@
     </div>
   </div>
 
-  <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
     <p>&copy; 2026 Johan van Gravenbroek &nbsp;·&nbsp; <a href="mailto:you@example.com">you@example.com</a></p>
   </footer>
